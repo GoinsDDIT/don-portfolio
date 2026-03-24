@@ -5,7 +5,7 @@ Hi, I’m Don.
 Senior IT Systems & Infrastructure Lead
 
 I specialize in:
-- Warehouse Control Systems (WCS / Knapp KiSoft)
+- Warehouse Control Systems (WMOS)-(WCS / Knapp KiSoft)
 - SQL Server + SSRS Reporting
 - Network & Infrastructure Troubleshooting
 - Automation & Production Support
