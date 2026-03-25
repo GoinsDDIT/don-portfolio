@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PBX & Paging Infrastructure | Don</title>
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #0f172a;
+    color: #e2e8f0;
+    margin: 0;
+}
+.container {
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px;
+}
+h1 {
+    color: #38bdf8;
+}
+h2 {
+    border-bottom: 2px solid #334155;
+    padding-bottom: 5px;
+}
+.card {
+    background: #1e293b;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+}
+code {
+    display: block;
+    background: #020617;
+    padding: 10px;
+    border-radius: 6px;
+}
+a {
+    color: #38bdf8;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>PBX & Paging Infrastructure (Algo + Bogen + GoTo Connect)</h1>
+
+<div class="card">
+<h2>Overview</h2>
+<p>
+Designed and implemented a hybrid paging and voice system integrating VoIP PBX, IP paging devices, and analog amplification hardware to support facility-wide communication.
+</p>
+</div>
+
+<div class="card">
+<h2>Architecture</h2>
+
+<ul>
+<li>GoTo Connect PBX → SIP paging extension</li>
+<li>Algo 8301 → Converts SIP to analog audio output</li>
+<li>Bogen UTI / TPU → Amplifies and distributes paging audio</li>
+<li>Zone routing → Controlled via paging inputs and override connections</li>
+</ul>
+
+<p>
+This architecture allowed VoIP calls to trigger analog paging across multiple zones using existing amplification infrastructure.
+</p>
+
+</div>
+
+<div class="card">
+<h2>Key Components</h2>
+
+<ul>
+<li>Algo 8301 SIP Paging Adapter</li>
+<li>Bogen UTI1 / UTI312</li>
+<li>TPU-60B / TPU-100B Amplifiers</li>
+<li>DFT120 / BOMU Stack Modules</li>
+<li>Viking Tone Generator</li>
+<li>GoTo Connect PBX (cloud-based)</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h2>Implementation</h2>
+
+<ul>
+<li>Configured SIP extension for paging in GoTo Connect</li>
+<li>Integrated Algo device with PBX using SIP credentials</li>
+<li>Connected Algo output to Bogen override input</li>
+<li>Configured amplification stack for multi-zone output</li>
+<li>Implemented tone signaling for paging activation</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h2>Challenges</h2>
+
+<ul>
+<li>Bridging VoIP (SIP) with analog paging hardware</li>
+<li>Managing zone-based paging through Bogen stack</li>
+<li>Signal level matching between IP and analog systems</li>
+<li>Troubleshooting audio routing and activation triggers</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h2>Troubleshooting</h2>
+
+<ul>
+<li>Verified SIP registration and call routing</li>
+<li>Adjusted gain levels between Algo and amplifier inputs</li>
+<li>Tested override input behavior on Bogen system</li>
+<li>Validated tone generator signaling</li>
+</ul>
+
+</div>
+
+<div class="card">
+<h2>Impact</h2>
+
+<p>
+Delivered a reliable, scalable paging system that integrates seamlessly with cloud PBX infrastructure, improving communication across production and operational areas.
+</p>
+
+</div>
+
+<div class="card">
+<h2>Why This Matters</h2>
+
+<p>
+This project demonstrates cross-domain expertise in networking, VoIP, analog systems, and real-world infrastructure integration—skills that are rare and highly valuable in production environments.
+</p>
+
+</div>
+
+<div class="card">
+<h2>Back</h2>
+<p><a href="index.html">← Return to main page</a></p>
+</div>
+
+</div>
+
+</body>
+</html>
