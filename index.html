@@ -100,14 +100,43 @@ a {
 
         <h3 class="highlight">WCS Production Reporting System</h3>
         
-            
+         <h3 class="highlight">
+    <a href="wcs-reporting.html">WCS Production Reporting System</a>
+</h3>
 
 <p><strong>Problem:</strong> No reliable visibility into station-level production metrics.</p>
 
 <p><strong>Solution:</strong> Built a full SQL Server + SSRS reporting pipeline by parsing raw WCS log files using Bash and SQL transformations.</p>
 
 <p><strong>Impact:</strong> Delivered accurate Orders, Pieces, and Totes metrics and identified discrepancies caused by duplicate events and station restarts.</p>
-      </p>  
+
+<p><strong>Architecture:</strong></p>
+
+<ul>
+    <li>WCS Logs → Parsed via Bash (grep, awk)</li>
+    <li>CSV Export → Imported into SQL Server</li>
+    <li>SQL Views → Aggregation and normalization</li>
+    <li>SSRS → Final reporting layer</li>
+</ul>
+
+<p>
+Data flows from raw WCS log files through a transformation pipeline into SQL Server.
+Bash scripts extract structured data, which is then normalized and aggregated using SQL views before being surfaced in SSRS dashboards.
+</p>
+
+<img src="images/ssrs-report.png" style="width:100%; border-radius:8px; margin-top:10px;">
+
+<p><strong>Key Technique:</strong> 15-minute interval bucketing</p>
+
+<pre style="background:#020617; padding:10px; border-radius:6px; overflow-x:auto;">
+DATEADD(MINUTE, DATEDIFF(MINUTE, 0, EVENT_DT)/15*15, 0)
+</pre>
+
+<p>
+This approach ensured accurate tracking of station activity windows instead of relying on inconsistent raw timestamps.
+</p>   
+
+  
 <img src= "ssrs-report.png">
         
         <h3 class="highlight">SQL Disaster Recovery</h3>
